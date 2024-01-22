@@ -1,9 +1,14 @@
 const infobar = document.getElementById('infobar');
+const buyButton = document.getElementById('buy-button');
+buyButton.addEventListener('click', () => {
+  buyAll();
+});
 
 // Initialize cart
 let cart = {
   items: 0,
-  total: 0
+  total: 0,
+  cartItems: [],
 };
 
 // Function to display products
@@ -18,6 +23,7 @@ function addToCart(product) {
   // Update cart
   cart.items += 1;
   cart.total += Number(product.price);
+  cart.cartItems.push(product);
 
   console.log(product.price);
 
@@ -35,6 +41,34 @@ function addToCart(product) {
 function updateCartButton() {
   const cartButton = document.getElementById('cart-button');
   cartButton.textContent = `Cart (${cart.items}) - Total Price: Rs. ${cart.total.toFixed(2)}`;
+}
+
+function buyAll() {
+  if (cart.items === 0) {
+    alert('Cart is empty');
+    return;
+  }
+
+  const cartItems = cart.cartItems;
+  const cartTotal = cart.total;
+
+  // Reset cart
+  cart = {
+    items: 0,
+    total: 0,
+    cartItems: [],
+  };
+
+  updateCartButton();
+
+  // Display message
+  const info = `You have bought ${cartItems.length} items for Rs. ${cartTotal.toFixed(2)}`;
+  infobar.textContent = info;
+  infobar.style.display = 'block';
+  setTimeout(() => {
+    infobar.textContent = '';
+    infobar.style.display = 'none';
+  }, 5000);
 }
 
 // Display products when the page loads
