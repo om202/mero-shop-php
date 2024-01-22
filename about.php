@@ -24,11 +24,20 @@
         <img src="./logo.png" alt="New Summit logo" width="240px"/>
         <h3>New Summit College, Shantinagar, Kathmandu</h3>
         <p>
-          Mero Shop is a small online shop. The project is part of the college assignment for the course Web Programming.
+          Mero Shop is a small online shop. The project is part of the college assignment/project for the course System Analysis and Design.
         </p>
         <img src="./pooja.png" alt="pooja shah logo" width="300px"/>
         <p>
-          The project is developed by Pooja Shah.
+          Image Caption: Pooja Sah.
+        </p>
+        <h3>Official Information</h3>
+        <p>
+          <strong>Name of Candidate:</strong> Pooja Sah<br />
+          <strong>Semester:</strong> V (Five)<br />
+          <strong>Prorgram:</strong> Bachelor of Science in Information Technology (BSc. CSIT)<br />
+          <strong>Course (Subject):</strong> System Analysis and Design<br />
+          <strong>College:</strong> New Summit College, Shantinagar, Kathmandu<br />
+          <strong>Submitted To:</strong> Parichay Adhikari Sir<br />
         </p>
       </div>
     </main>
