@@ -12,6 +12,31 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+// Create database if not exists
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql) === TRUE) {
+  echo "";
+} else {
+  echo "Error creating database: " . $conn->error;
+}
+
+// Select the database
+$conn->select_db($dbname);
+
+// Create table if not exists
+$sql = "CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  price DECIMAL(10,2),
+  quantity INT
+)";
+
+if ($conn->query($sql) === TRUE) {
+  echo "";
+} else {
+  echo "Error creating table: " . $conn->error;
+}
+
 $sql = "SELECT * FROM products";
 
 $result = $conn->query($sql);
