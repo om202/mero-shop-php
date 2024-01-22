@@ -12,7 +12,7 @@
       <nav>
         <ul>
           <li><a href="index.php">Buy</a></li>
-          <li><a href="add.php">Add</a></li>
+          <li><a href="add.php">Inventory</a></li>
           <li><a href="about.php">About</a></li>
         </ul>
       </nav>

@@ -12,14 +12,15 @@
       <nav>
         <ul>
           <li><a href="index.php">Buy</a></li>
-          <li><a href="add.php">Add</a></li>
+          <li><a href="add.php">Inventory</a></li>
           <li><a href="about.php">About</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <div id="infobar"></div>
       <div id="cart-button"></div>
-      <button id="buy-button">Buy All</button>
+      <button id="buy-button" class="action-button">Buy All</button>
       <section id="products">
         <!-- Product cards will go here -->
       </section>

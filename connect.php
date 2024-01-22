@@ -15,14 +15,20 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM products";
 
 $result = $conn->query($sql);
-
+echo "<section id='products'>";
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Price: " . $row["price"]. "<br>";
+    echo "<div class='product-card'>";
+    echo "<p class='product-id'>" . $row["id"] . "</p>";
+    echo "<p class='product-title'>" . $row["name"] . "</p>";
+    echo "<p class='product-price'>Rs. " . number_format($row["price"], 2) . "</p>";
+    echo "<p class='product-quantity'> In Stock: " . number_format($row["quantity"], 0) . "</p>";
+    echo "<button class='product-button' onclick='addToCart(" .json_encode($row). ")'>Add to Cart</button>";
+    echo "</div>";
   }
 } else {
   echo "0 results";
 }
-
+echo "</section>";
 $conn->close();
 ?>
