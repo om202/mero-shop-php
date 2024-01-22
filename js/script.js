@@ -67,12 +67,8 @@ function buyAll() {
   const info = `You have bought ${
     cartItems.length
   } items for Rs. ${cartTotal.toFixed(2)}`;
-  infobar.textContent = info;
-  infobar.style.display = "block";
-  setTimeout(() => {
-    infobar.textContent = "";
-    infobar.style.display = "none";
-  }, 5000);
+
+  window.alert(info);
 
   // // call php update database
   // let data = JSON.stringify(cartItems);
