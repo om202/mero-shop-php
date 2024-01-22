@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="logo.ico" />
     <title>Mero Shop: About</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <h2>  &#x1F6CD; Mero Shop</h2>
       <nav>
         <ul>
-          <li><a href="index.php">Buy</a></li>
+          <li><a href="index.php">Shopping</a></li>
           <li><a href="add.php">Inventory</a></li>
           <li><a href="about.php">About</a></li>
         </ul>
@@ -20,7 +21,7 @@
     <main>
       <div class="about" style="max-width: 700px">
         <h1>About Mero Shop</h1>
-        <img src="./logo.jpg" alt="New Summit logo" width="300px"/>
+        <img src="./logo.png" alt="New Summit logo" width="240px"/>
         <h3>New Summit College, Shantinagar, Kathmandu</h3>
         <p>
           Mero Shop is a small online shop. The project is part of the college assignment for the course Web Programming.
